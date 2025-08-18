@@ -47,17 +47,17 @@ export function HowItWorks() {
               <div key={index} className="text-center group">
                 {/* Step Number */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     {step.number}
                   </div>
                   {index < steps.length - 1 && (
-                    <ArrowRight className="hidden lg:block absolute top-8 -right-12 h-6 w-6 text-muted-foreground" />
+                    <ArrowRight className="hidden lg:block absolute top-8 -right-12 h-6 w-6 text-primary opacity-60" />
                   )}
                 </div>
 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <step.icon className="h-6 w-6" />
+                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg transition-all duration-300">
+                  <step.icon className="h-6 w-6" strokeWidth={2} />
                 </div>
 
                 {/* Content */}

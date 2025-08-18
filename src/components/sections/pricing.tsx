@@ -75,10 +75,10 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <Card 
               key={index}
-              className={`relative border-2 transition-all duration-300 hover:shadow-xl ${
+              className={`relative border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 plan.popular 
-                  ? 'border-primary shadow-lg scale-105 bg-gradient-to-b from-card to-primary/5' 
-                  : 'border-border hover:border-primary/50'
+                  ? 'border-primary shadow-2xl scale-105 bg-gradient-to-b from-card to-primary/5 hover:shadow-primary/20' 
+                  : 'border-border hover:border-primary/50 hover:shadow-lg'
               }`}
             >
               {plan.popular && (
@@ -105,7 +105,7 @@ export function Pricing() {
                 <ul className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-success mt-0.5 flex-shrink-0 bg-success/10 rounded-full p-1" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -126,7 +126,7 @@ export function Pricing() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            All plans include 7-day free trial • No setup fees • Cancel anytime
+            All plans include 7-day free trial • No setup fees • <span className="font-semibold text-foreground">Cancel anytime</span>
           </p>
           <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
             <div className="flex items-center space-x-2">

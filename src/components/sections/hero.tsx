@@ -56,7 +56,7 @@ export function Hero() {
             </div>
 
             {/* CTA Section */}
-            <div className="space-y-4">
+            <div className="space-y-4 mt-8">
               <p className="text-sm font-medium">Try it free - scan your website now:</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Input 
@@ -68,7 +68,7 @@ export function Hero() {
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground">
-                No credit card required • Get results in 60 seconds
+                <span className="font-bold">No credit card required</span> • Get results in 60 seconds
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export function Hero() {
               
               <div className="grid grid-cols-2 gap-6 mb-6">
                 <div className="text-center">
-                  <SecurityScore score={87} size="lg" />
+                  <SecurityScore score={87} size="lg" className="animate-pulse-glow" />
                   <p className="text-sm text-muted-foreground mt-2">Overall Security</p>
                 </div>
                 <div className="space-y-3">

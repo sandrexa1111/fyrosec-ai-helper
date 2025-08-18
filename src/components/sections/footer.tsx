@@ -4,7 +4,19 @@ export function Footer() {
   return (
     <footer className="bg-card border-t">
       <div className="container py-16">
-        <div className="grid md:grid-cols-4 gap-8">
+        {/* Social Proof Section */}
+        <div className="text-center mb-12">
+          <p className="text-sm text-muted-foreground mb-6">Trusted by businesses worldwide</p>
+          <div className="flex items-center justify-center space-x-8 opacity-60">
+            <div className="text-xs font-medium">Featured in TechCrunch</div>
+            <div className="w-px h-4 bg-border"></div>
+            <div className="text-xs font-medium">SOC 2 Certified</div>
+            <div className="w-px h-4 bg-border"></div>
+            <div className="text-xs font-medium">1000+ Sites Protected</div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -62,6 +74,22 @@ export function Footer() {
               <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
             </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="space-y-4">
+            <h4 className="font-semibold">Stay Updated</h4>
+            <p className="text-sm text-muted-foreground">Get security tips and product updates</p>
+            <div className="flex flex-col space-y-2">
+              <input 
+                type="email" 
+                placeholder="Enter your email"
+                className="px-3 py-2 bg-input border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button className="px-4 py-2 bg-primary text-primary-foreground rounded text-sm hover:bg-primary/90 transition-colors">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
 
